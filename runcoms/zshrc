@@ -5,9 +5,26 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dorukhansergin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dorukhansergin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dorukhansergin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dorukhansergin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# zsh-conda-autocomplete
+fpath+=/Users/dorukhansergin/Clones/conda-zsh-completion
+compinit conda

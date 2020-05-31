@@ -38,7 +38,13 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'git' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'contrib-prompt' \
+  'prompt' \
+  'python' \
+  'alias-tips' \
 
 #
 # Autosuggestions
@@ -116,7 +122,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'spaceship'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
@@ -136,6 +142,12 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+
+# Disable virtualenvwrapper
+zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
+
+# Enable Conda
+zstyle ':prezto:module:python' conda-init 'on'
 
 #
 # Ruby
@@ -225,3 +237,9 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+
+#
+# Alias tips
+#
+
+zstyle ":prezto:module:alias-tips" text "Alias tip: "
