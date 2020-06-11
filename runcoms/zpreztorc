@@ -45,6 +45,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'python' \
   'alias-tips' \
+  'archive' \
 
 #
 # Autosuggestions
